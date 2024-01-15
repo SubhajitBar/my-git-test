@@ -19,4 +19,5 @@ Clone Command--<br>
 
 Branch Command--<br>
   git branch(check branch), git branch -M main(rename), git checkout -b <-branchName->(create new branch),<br> 
-  git checkout <-branchName->(navigate branches), git branch -d <-branchName->(delete branch)
+  git checkout <-branchName->(navigate branches), git branch -d <-branchName->(delete branch)<br>
+  git push origin <-branchName->
