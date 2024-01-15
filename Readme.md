@@ -17,3 +17,6 @@ Clone Command--<br>
   git clone <-link-> 
   git clone <-link-> . (clone in current folder)
 
+Branch Command--<br>
+  git branch(check branch), git branch -M main(rename), git checkout -b <-branchName->(create new branch),<br> 
+  git checkout <-branchName->(navigate branches), git branch -d <-branchName->(delete branch)
