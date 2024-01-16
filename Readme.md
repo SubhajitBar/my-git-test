@@ -29,4 +29,4 @@
 
   Way2:<br>
       create a PR(Pull Request)
-
+      git pull origin main/git pull <-link->
