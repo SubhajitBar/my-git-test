@@ -7,6 +7,7 @@
   ls, 
   ls -a, (show all directories including Hidden)  
   pwd (show path)<br>
+  git log (check all commits)
 
 # Init Command--<br>
   git init, git add . , git status, git commit -m "commit name",<br>
@@ -24,9 +25,22 @@
 
 # Merging Branch--<br>
   Way1:<br>
-      git diff <-branchName->
+  # Also used to solve merge conflicts.
+      git diff <-branchName->,
       git merge <-branchName->
 
   Way2:<br>
-      create a PR(Pull Request)
+      create a PR(Pull Request),<br>
       git pull origin main/git pull <-link->
+
+# Undoing Changes--<br>
+  Case1:staged changes <br>
+        git reset <-fileName->, 
+        git reset
+  <br>
+  Case2:commited changes(for one)<br>
+        git reset HEAD~1
+  <br>
+  Case3:commited changes(for many)<br>
+        git reset <-commitHash->,
+        git reset --hard <-commitHash->
