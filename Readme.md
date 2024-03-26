@@ -90,11 +90,44 @@ Case3:commited changes(for many)<br>
 	OR
      git pull upstream main
 
-# Pick & Squash--<br>
+# Interactive Rebase Commands--<br>
   
-  git rebase -i <--commit hash--><br>
-  to whom, commits will merge choose it as `pick` those who will merge, change them to `s` or `squash`. Then write commit message<br> 
+  git rebase -i <--commit hash-->(used to merge various commits, change messages, drop commits etc)<br>
+  Ex: to whom, commits will merge choose it as `pick` those who will merge, change them to `s` or `squash`. Then write commit message<br> 
 
+# Cherry Picking--<br>
+    git cherry-pick <--commit hash-->
+
+# Reflog--<br>
+    git reflog
+   Ex: git branch feature <--commit hash-->/ git reset <--commit hash-->
+  <br>(used to see all history including reset, delete etc, using hash deleted commits, branches can retrieve)
+
+# Prune & unreachable objects--<br>
+  
+To list all unreachable objects in the repository:<br>
+  	git fsck --unreachable
+To remove the unreachable objects:<br>
+	git prune
+Still unreachable objects remain after running git prune, you can force Git to remove them by running:<br>
+	git reflog expire --expire=now --all
+	git gc --prune=now
+The git reflog expire --expire=now --all command expires all reflog entries immediately, making sure no references to unreachable objects remain.
+The git gc --prune=now command performs a garbage collection and removes all unreferenced objects immediately.
+
+
+# Search & Find--<br>
+by date:
+  	--before / --after
+Ex: git log --after="2024-3-20"
+by message: 
+  	--grep
+by author:
+  	--author
+by file:
+  	-- <filename>
+by branch:
+  	<branch-A>
 
 # Remove Commands--<br>
 
