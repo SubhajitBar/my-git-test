@@ -90,11 +90,31 @@ Case3:commited changes(for many)<br>
 	OR
      git pull upstream main
 
-# Pick & Squash--<br>
+# Interactive Rebase Commands--<br>
   
-  git rebase -i <--commit hash--><br>
-  to whom, commits will merge choose it as `pick` those who will merge, change them to `s` or `squash`. Then write commit message<br> 
+  git rebase -i <--commit hash-->(used to merge various commits, change messages, drop commits etc)<br>
+  Ex: to whom, commits will merge choose it as `pick` those who will merge, change them to `s` or `squash`. Then write commit message<br> 
 
+# Cherry Picking--<br>
+    git cherry-pick <--commit hash-->
+
+# Reflog--<br>
+    git reflog
+   Ex: git branch feature <--commit hash-->/ git reset <--commit hash-->
+  <br>(used to see all history including reset, delete etc, using hash deleted commits, branches can retrieve)
+
+# Search & Find--<br>
+  by date:
+  	--before / --after
+  Ex: git log --after="2024-3-20"
+  by message: 
+  	--grep
+  by author:
+  	--author
+  by file:
+  	-- <filename>
+  by branch:
+  	<branch-A>
 
 # Remove Commands--<br>
 
