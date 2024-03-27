@@ -82,6 +82,9 @@ Case3:commited changes(for many)<br>
   git reset --hard <-commitHash->, <br>
   git reset --soft <-commitHash-> (only commit will reset but code change will still remains)<br>
 
+#Revert<br>
+    git revert <--commit hash-->
+
 # Fork--<br>
   git remote add upstream <-url-> (adding upstream url)
   # Sync fork--<br>
@@ -105,13 +108,17 @@ Case3:commited changes(for many)<br>
 
 # Prune & unreachable objects--<br>
   
+    git fsck --unreachable
 To list all unreachable objects in the repository:<br>
-  	git fsck --unreachable
+
+    git prune
 To remove the unreachable objects:<br>
-	git prune
+
 Still unreachable objects remain after running git prune, you can force Git to remove them by running:<br>
-	git reflog expire --expire=now --all
-	git gc --prune=now
+
+    git reflog expire --expire=now --all
+    git gc --prune=now
+
 The git reflog expire --expire=now --all command expires all reflog entries immediately, making sure no references to unreachable objects remain.
 The git gc --prune=now command performs a garbage collection and removes all unreferenced objects immediately.
 
@@ -127,7 +134,7 @@ by author:
 by file:
   	-- <filename>
 by branch:
-	--branch name
+	--<branch name>
 
 # Remove Commands--<br>
 
