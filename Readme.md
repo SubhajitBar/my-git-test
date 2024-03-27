@@ -127,7 +127,7 @@ by author:
 by file:
   	-- <filename>
 by branch:
-  	<branch-A>
+	--branch name
 
 # Remove Commands--<br>
 
